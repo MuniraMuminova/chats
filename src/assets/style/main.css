@@ -1,0 +1,227 @@
+@import 'fonts.css';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'RR';
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+  
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.messagers{
+    display: flex;
+    gap: 20px;
+}
+.messagers__window-header{
+
+    padding: 31px 20px;
+    background: #323232;
+    gap: 10px;
+    display: flex;
+}
+.messagers__window{
+    width: 400px;
+    height: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: url('../img/bg__chat.png') no-repeat;
+
+}
+.messagers__window-name{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 14px;
+    color: #fff;
+}
+.messagers__window-status{
+    margin-top: 2px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+}
+
+.main__body{
+    overflow: auto;
+    height: 632px;
+}
+.main__chatitem{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.main__chatitem-body{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.main__chatitem-text{
+    max-width: 80%;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+.main__chatitem-body.send .main__chatitem-text{
+    background: #D0DCFF;
+    border-radius: 15px 15px 0px 15px;
+    margin-left: 5px;
+}
+.main__chatitem-text img{
+    width: 100%;
+    border-radius: 13px;
+}
+.main__chatitem-body.send{
+    justify-content: end;
+}
+.main__chatitem-body.get .main__chatitem-text{
+    background: #C4BFFF;
+    border-radius: 15px 15px 15px 0px;
+    margin-right: 5px;
+}
+.main__chatitem-body.get {
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+.footer{
+    padding: 16px 20px;
+    background: #323232;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.footer__edit{
+    flex-grow: 1;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    font-family: 'RR';
+}
+.footer__btn{
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.footer__btn:focus{
+    background: rgba(255, 255, 255, 0,3);
+}
+
+.list-enter-active,
+.list-leave-active{
+    transition: 300ms linear;
+}
+.list-enter-from,
+.list-leave-to{
+   opacity: 0;
+   transform: scale(0.9);
+}
+.window{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+.window__body{
+    background: #F2F7FF;
+    border-radius: 28px;
+    width: 312px;
+    padding: 24px;
+}
+.window__title{
+    font-weight: 400;
+    font-family: 'RR';
+    line-height: 32px;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #1C1B1F;
+}
+.window__from{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+.window__from label{
+    position: relative;
+}
+.window__from span{
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0.4px;
+    position: absolute;
+    top: 0;
+    left: 18px;
+}
+.window__from input,
+.window__from textarea{
+    background: #E7E0EC;
+    border-radius: 4px 4px 0px 0px;
+    border: none;
+    border-bottom: 1px solid #1C1B1F;
+    resize: none;
+    outline: none;
+    font-family: 'RR';
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    padding: 23px 16px 9px;
+}
+.window__footer{
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+}
+.btn{
+    padding: 10px 12px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    align-items: center;
+    font-family: 'RR';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    transition: 200ms;
+    user-select: none;
+}
+.btn.red{
+    color: #CF1B1B;
+}
+.btn.purpure{
+    color: #6750A4;
+}
